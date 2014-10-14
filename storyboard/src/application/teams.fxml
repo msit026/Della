@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.teamController">
+   <children>
+      <HBox prefHeight="54.0" prefWidth="697.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goToScreen1" text="Console">
+               <HBox.margin>
+                  <Insets left="70.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goToScreen2" text="Action Items">
+               <HBox.margin>
+                  <Insets left="20.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goToScreen3" text="Members">
+               <HBox.margin>
+                  <Insets left="20.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Teams">
+               <HBox.margin>
+                  <Insets left="20.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Quit">
+               <HBox.margin>
+                  <Insets left="20.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="34.0" prefWidth="728.0">
+         <children>
+            <Label alignment="CENTER" text="Action Items">
+               <HBox.margin>
+                  <Insets left="250.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Button alignment="TOP_RIGHT" mnemonicParsing="false" text="Help">
+               <HBox.margin>
+                  <Insets left="330.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="188.0" prefWidth="726.0">
+         <children>
+            <VBox prefHeight="188.0" prefWidth="251.0">
+               <children>
+                  <Label text="Enter name of the Team : ">
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="f1" prefHeight="25.0" prefWidth="188.0">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="188.0" prefWidth="256.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addTeam" text="      Add to List -&gt;     ">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin></Button>
+                  <Button layoutX="70.0" layoutY="50.0" mnemonicParsing="false" text="&lt;- Remove from List" />
+               </children>
+               <padding>
+                  <Insets left="60.0" top="40.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="188.0" prefWidth="261.0">
+               <children>
+                  <Label text="Teams known by Della">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <ListView fx:id="l1" prefHeight="200.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="49.0" prefWidth="730.0" />
+      <HBox prefHeight="198.0" prefWidth="729.0">
+         <children>
+            <VBox prefHeight="237.0" prefWidth="240.0">
+               <children>
+                  <Label text="Available Members : ">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ListView fx:id="l2" prefHeight="232.0" prefWidth="240.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+            </VBox>
+            <VBox prefHeight="189.0" prefWidth="245.0">
+               <children>
+                  <Button mnemonicParsing="false" text="       Add to List -&gt;    ">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="&lt;- Remove from List" />
+               </children>
+               <padding>
+                  <Insets left="60.0" top="40.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="237.0" prefWidth="251.0">
+               <children>
+                  <Label text="Current Members : ">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <ListView fx:id="l3" prefHeight="234.0" prefWidth="248.0">
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="47.0" prefWidth="697.0">
+         <padding>
+            <Insets left="60.0" right="5.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="49.0" prefWidth="700.0">
+         <children>
+            <Label text="Status : ">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Online" />
+         </children>
+         <padding>
+            <Insets left="250.0" top="20.0" />
+         </padding>
+      </HBox>
+   </children>
+</FlowPane>

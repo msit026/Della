@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.actionController">
+   <children>
+      <HBox prefHeight="54.0" prefWidth="697.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goToScreen1" text="Console">
+               <HBox.margin>
+                  <Insets left="70.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Action Items">
+               <HBox.margin>
+                  <Insets left="20.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goToScreen3" text="Members">
+               <HBox.margin>
+                  <Insets left="20.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goToScreen4" text="Teams">
+               <HBox.margin>
+                  <Insets left="20.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Quit">
+               <HBox.margin>
+                  <Insets left="20.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="34.0" prefWidth="697.0">
+         <children>
+            <Label alignment="CENTER" text="Action Items">
+               <HBox.margin>
+                  <Insets left="250.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="475.0">
+         <children>
+            <Label prefHeight="35.0" prefWidth="463.0" text="Action Items : ">
+               <padding>
+                  <Insets bottom="10.0" left="150.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <ListView fx:id="actionItemList" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="223.0">
+         <children>
+            <Label text="Sorting Direction : ">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="sortingDir" prefWidth="150.0" />
+            <Label text="First Sorting Order : ">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="firstSortingOrder" prefWidth="150.0" />
+            <Label text="Second Sorting Order : ">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="secondSortingOrder" prefWidth="150.0" />
+            <Label text="Inclusion Factor : ">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="inclusionFactor" prefWidth="150.0" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="476.0">
+         <children>
+            <GridPane prefHeight="188.0" prefWidth="436.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="99.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="390.0" minWidth="10.0" prefWidth="337.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="144.0" minHeight="4.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="140.0" minHeight="4.0" prefHeight="67.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Title" />
+                  <Label GridPane.rowIndex="1" />
+                  <Label text="Resolution : " GridPane.rowIndex="2" />
+                  <TextArea fx:id="description" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextArea fx:id="resolution" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Description : " GridPane.rowIndex="1" />
+                  <TextField fx:id="name" GridPane.columnIndex="1"/>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="253.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="50.0" />
+         </padding>
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" prefWidth="102.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="81.0" minWidth="10.0" prefWidth="72.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Due Date : " GridPane.rowIndex="1" />
+                  <Label text="Created Date : " />
+                  <Label text="Assigned to" GridPane.rowIndex="3" />
+                  <Label text="Team : " GridPane.rowIndex="4" />
+                  <Label text="Status : " GridPane.rowIndex="2" />
+                  <Label fx:id="creationDate" text="2014-09-15" GridPane.columnIndex="1" />
+                  <DatePicker fx:id="dueDate" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="status" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="assignedTo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="team" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </children>
+         <FlowPane.margin>
+            <Insets />
+         </FlowPane.margin>
+      </VBox>
+      <HBox prefHeight="54.0" prefWidth="697.0">
+         <children>
+            <Button mnemonicParsing="false" text="Update" onAction="#update">
+               <HBox.margin>
+                  <Insets left="70.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Clear">
+               <HBox.margin>
+                  <Insets left="20.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="createButton" mnemonicParsing="false" text="Create" onAction="#create">
+               <HBox.margin>
+                  <Insets left="20.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Delete">
+               <HBox.margin>
+                  <Insets left="20.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="60.0" right="5.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="49.0" prefWidth="700.0">
+         <children>
+            <Label text="Status : ">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Online" />
+         </children>
+         <padding>
+            <Insets left="250.0" top="20.0" />
+         </padding>
+      </HBox>
+   </children>
+</FlowPane>
